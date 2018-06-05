@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import sys
 import pygame
@@ -92,7 +92,7 @@ def acceleration(obj, t, direction):
         g = obj.mass * 9.81 * 5
         net_y_force = obj.y_force - g
         new_acc = net_y_force / float(obj.mass)
-    #print 'acc ' + direction + ': ' + str(new_acc)
+    #print('acc ' + direction + ': ' + str(new_acc))
     return new_acc
 
 
@@ -170,10 +170,10 @@ def main():
         screen.blit(box.surface, box.rect)
         pygame.display.flip()
 
-        print 'box.rect.x @ {0:.3f}: {1:.3f}'.format(state.t, box.rect.x)
-        print 'box.x_vel @ {0:.3f}: {1:.3f}'.format(state.t, box.x_vel)
-        print 'state.rect.y @ {0:.3f}: {1:.3f}'.format(state.t, box.rect.y)
-        print 'state.y_vel @ {0:.3f}: {1:.3f}\n'.format(state.t, box.y_vel)
+        print('box.rect.x @ {0:.3f}: {1:.3f}'.format(state.t, box.rect.x))
+        print('box.x_vel @ {0:.3f}: {1:.3f}'.format(state.t, box.x_vel))
+        print('state.rect.y @ {0:.3f}: {1:.3f}'.format(state.t, box.rect.y))
+        print('state.y_vel @ {0:.3f}: {1:.3f}\n'.format(state.t, box.y_vel))
 
         clock.tick(state.fps)
         state.t += state.dt

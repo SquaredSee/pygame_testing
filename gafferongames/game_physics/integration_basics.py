@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import sys
 import pygame
@@ -89,8 +89,8 @@ def main():
             if state.y <= 0:
                 state.v = -state.v
 
-            print 'state.y @ {}: {}'.format(t, state.y)
-            print 'state.v @ {}: {}\n'.format(t, state.v)
+            print('state.y @ {}: {}'.format(t, state.y))
+            print('state.v @ {}: {}\n'.format(t, state.v))
             t += dt
 
         screen.fill((255, 255, 255))

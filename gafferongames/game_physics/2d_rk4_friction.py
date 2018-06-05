@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import sys
 import pygame
@@ -184,12 +184,12 @@ def main():
         screen.blit(box.surface, box.rect)
         pygame.display.flip()
 
-        print 'box.rect.x @ {0:.3f}: {1:.3f}'.format(state.t, box.rect.x)
-        print 'box.x_vel @ {0:.3f}: {1:.3f}'.format(state.t, box.x_vel)
-        print 'box.x_acc @ {0:.3f}: {1:.3f}'.format(state.t, box.x_acc)
-        print 'state.rect.y @ {0:.3f}: {1:.3f}'.format(state.t, box.rect.y)
-        print 'state.y_vel @ {0:.3f}: {1:.3f}\n'.format(state.t, box.y_vel)
-        print 'box.y_acc @ {0:.3f}: {1:.3f}'.format(state.t, box.y_acc)
+        print('box.rect.x @ {0:.3f}: {1:.3f}'.format(state.t, box.rect.x))
+        print('box.x_vel @ {0:.3f}: {1:.3f}'.format(state.t, box.x_vel))
+        print('box.x_acc @ {0:.3f}: {1:.3f}'.format(state.t, box.x_acc))
+        print('state.rect.y @ {0:.3f}: {1:.3f}'.format(state.t, box.rect.y))
+        print('state.y_vel @ {0:.3f}: {1:.3f}\n'.format(state.t, box.y_vel))
+        print('box.y_acc @ {0:.3f}: {1:.3f}'.format(state.t, box.y_acc))
 
         clock.tick(state.fps)
         state.t += state.dt
