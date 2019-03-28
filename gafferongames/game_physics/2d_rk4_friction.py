@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+# python implementation of the integration basics tutorial
+# https://gafferongames.com/post/integration_basics/
+
 import sys
 import pygame
 from pygame.locals import *
@@ -20,16 +23,16 @@ class Derivative(object):
         if not dt:
             dt = state.dt
         if obj:
-            _temp_obj = obj
-            _temp_obj.rect.x = obj.rect.x + der.dx * state.dt
-            _temp_obj.rect.y = obj.rect.y + der.dy * state.dt
-            _temp_obj.x_vel = obj.x_vel + der.dvx * state.dt
-            _temp_obj.y_vel = obj.y_vel + der.dvy * state.dt
+            temp_obj = obj
+            temp_obj.rect.x = obj.rect.x + der.dx * state.dt
+            temp_obj.rect.y = obj.rect.y + der.dy * state.dt
+            temp_obj.x_vel = obj.x_vel + der.dvx * state.dt
+            temp_obj.y_vel = obj.y_vel + der.dvy * state.dt
 
-            self.dx = _temp_obj.x_vel
-            self.dy = _temp_obj.y_vel
-            self.dvx = acceleration(_temp_obj, state.t + dt, 'x')
-            self.dvy = acceleration(_temp_obj, state.t + dt, 'y')
+            self.dx = temp_obj.x_vel
+            self.dy = temp_obj.y_vel
+            self.dvx = acceleration(temp_obj, state.t + dt, 'x')
+            self.dvy = acceleration(temp_obj, state.t + dt, 'y')
         else:
             self.dx = 0
             self.dy = 0
